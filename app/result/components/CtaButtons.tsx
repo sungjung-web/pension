@@ -8,7 +8,7 @@ export default function CtaButtons() {
         navigator.share({
           title: '국민 연금 타이머',
           text: '나는 국민연금을 언제까지 받을 수 있을까',
-          url: 'https://maeum.vercel.app/',
+          url: 'https://pension-pi.vercel.app/',
         });
       }}
       className="w-full h-14 rounded-xl text-center text-white"
