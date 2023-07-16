@@ -13,18 +13,18 @@ export default function Home() {
   return (
     <>
       <Spacing size={50} />
-      <h1 className="font-black text-2xl text-center">
+      <h1 className="font-black text-2xl text-center whitespace-pre-wrap">
         {match(testGroup)
-          .with('a', () => '나는 국민연금을 얼마나 돌려받을 수 있을까?')
-          .with('b', () => '나는 국민연금을 언제까지 받을 수 있을까?')
-          .otherwise(() => '나는 국민연금을 언제까지 받을 수 있을까?')}
+          .with('a', () => '나는 국민연금을\n얼마나 돌려받을 수 있을까?')
+          .with('b', () => '나는 국민연금을\n언제까지 받을 수 있을까?')
+          .otherwise(() => '나는 국민연금을\n언제까지 받을 수 있을까?')}
         </h1>
       <Spacing size={12} />
       <p className="font-bold text-center" style={{ color: '#868E96' }}>
         by team MAEUM
       </p>
       <Spacing size={50} />
-      <div className="flex flex-column gap-2">
+      <div className="w-full flex flex-column gap-2">
         <div className="w-full relative aspect-square">
           <Image fill alt="기영이 할머니" src="/resources/grand.png" />
         </div>
@@ -36,7 +36,7 @@ export default function Home() {
         </div>
       </div>
       <Spacing size={20} />
-      <div className="flex flex-column gap-1">
+      <div className="w-full flex flex-column gap-1">
         <div className="w-full relative aspect-square">
           <Image fill alt="기영이 할머니" src="/resources/grand.png" />
         </div>

@@ -13,7 +13,7 @@ export default function Articles() {
 function Article({ title, href, date, image }: { title: string, href: string, date: Date, image: string }) {
   return (
     <Link href={href} target='_blank' className='flex gap-5 w-full'>
-      <div className="flex gap-5 w-full" style={{ padding: '20px 0', boxShadow: '0px 1px 0px #E9ECEF' }}>
+      <div className="flex gap-5 w-full justify-between" style={{ padding: '20px 0', boxShadow: '0px 1px 0px #E9ECEF' }}>
         <div className="flex flex-col justify-between">
           <p
             className="text-ellipsis line-clamp-2 break-keep"
