@@ -10,6 +10,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="kr">
       <head>
+        <meta property="og:image" content="https://pension-pi.vercel.app/resources/seo.png" />
+        <meta property="og:image:type" content="https://pension-pi.vercel.app/resources/seo.png" />
+        <meta property="og:image:width" content="https://pension-pi.vercel.app/resources/seo.png" />
+        <meta property="og:image:height" content="https://pension-pi.vercel.app/resources/seo.png" />
+        <meta name="twitter:image" content="https://pension-pi.vercel.app/resources/seo.png" />
+        <meta name="twitter:image:type" content="https://pension-pi.vercel.app/resources/seo.png" />
+        <meta name="twitter:image:width" content="https://pension-pi.vercel.app/resources/seo.png" />
+        <meta name="twitter:image:height" content="https://pension-pi.vercel.app/resources/seo.png" />
         <link rel="stylesheet" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
       </head>
       <body>
