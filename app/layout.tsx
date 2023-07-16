@@ -1,4 +1,5 @@
 import './globals.css';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: '연금 받을 수 있을까?',
@@ -13,6 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <main>
+          <Analytics />
           <div className="p-6 flex flex-col justify-center items-center">{children}</div>
         </main>
       </body>
