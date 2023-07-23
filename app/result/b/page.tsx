@@ -3,16 +3,16 @@ import Spacing from '@/components/Spacing';
 import { getPensionYears } from '@/utils';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import CtaButtons from '../../components/CtaButtons';
-import Articles from '../../components/Articles';
+import CtaButtons from '../components/CtaButtons';
+import Articles from '../components/Articles';
+import { useAge } from '../hooks/useAge';
 
 interface Props {
   params: { age: string };
 }
 
 export default function Age(props: Props) {
-  const age = props.params.age;
+  const age = useAge();
   const pensionYear = getPensionYears(Number(age));
 
   return (

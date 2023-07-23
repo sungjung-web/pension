@@ -4,11 +4,19 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { match } from 'ts-pattern';
+import Loading from './components/Loading';
 
 export default function Home() {
   const router = useRouter();
   const testGroup = getABTestGroup();
   const [age, setAge] = useState<string>();
+
+  const [loading, setLoading] = useState(false)
+  if (loading) {
+    return <Loading onFinished={() =>{
+      router.push(`/result/${testGroup}?age=${age}`)
+    }} />
+  }
 
   return (
     <>
@@ -58,7 +66,7 @@ export default function Home() {
       />
       <Spacing size={24} />
       <button
-        onClick={() => router.push(`/result/${testGroup}/${age}`)}
+        onClick={() => {setLoading(true)}}
         className="w-full h-14 rounded-xl text-center text-white"
         style={{ background: '#FF5A36' }}
       >
