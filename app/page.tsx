@@ -11,11 +11,15 @@ export default function Home() {
   const testGroup = getABTestGroup();
   const [age, setAge] = useState<string>();
 
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
   if (loading) {
-    return <Loading onFinished={() =>{
-      router.push(`/result/${testGroup}?age=${age}`)
-    }} />
+    return (
+      <Loading
+        onFinished={() => {
+          router.push(`/result/${testGroup}?age=${age}`);
+        }}
+      />
+    );
   }
 
   return (
@@ -26,7 +30,7 @@ export default function Home() {
           .with('a', () => '나는 국민연금을\n얼마나 돌려받을 수 있을까?')
           .with('b', () => '나는 국민연금을\n언제까지 받을 수 있을까?')
           .otherwise(() => '나는 국민연금을\n언제까지 받을 수 있을까?')}
-        </h1>
+      </h1>
       <Spacing size={12} />
       <p className="font-bold text-center" style={{ color: '#868E96' }}>
         by team MAEUM
@@ -58,15 +62,17 @@ export default function Home() {
       <Spacing size={64} />
       <input
         value={age}
-        onChange={(e) => setAge(e.target.value)}
+        onChange={e => setAge(e.target.value)}
         placeholder="당신의 현재 나이 입력"
         className="w-full h-14 rounded-xl text-center"
-        type='number'
+        type="number"
         style={{ background: '#F1F3F5' }}
       />
       <Spacing size={24} />
       <button
-        onClick={() => {setLoading(true)}}
+        onClick={() => {
+          setLoading(true);
+        }}
         className="w-full h-14 rounded-xl text-center text-white"
         style={{ background: '#FF5A36' }}
       >
@@ -77,11 +83,11 @@ export default function Home() {
 }
 
 function getABTestGroup(): 'a' | 'b' {
-  var randomValue = Math.random();  // 0 이상 1 미만의 임의의 소수값 생성
+  var randomValue = Math.random(); // 0 이상 1 미만의 임의의 소수값 생성
 
   if (randomValue < 0.5) {
-    return "a";
+    return 'a';
   } else {
-    return "b";
+    return 'b';
   }
 }

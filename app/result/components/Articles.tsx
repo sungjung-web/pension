@@ -14,7 +14,7 @@ function Article({ title, href, date, image }: { title: string, href: string, da
   return (
     <Link href={href} target='_blank' className='flex gap-5 w-full'>
       <div className="flex gap-5 w-full justify-between" style={{ padding: '20px 0', boxShadow: '0px 1px 0px #E9ECEF' }}>
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col justify-center gap-2">
           <p
             className="text-ellipsis line-clamp-2 break-keep"
             style={{ fontWeight: 600, fontSize: '15px', lineHeight: '22px' }}
