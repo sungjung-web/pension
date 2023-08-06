@@ -55,6 +55,9 @@ export default function Age(props: Props) {
       <PensionImage pensionYear={pensionYear} />
 
       <Spacing size={44} />
+      <CtaButtons />
+
+      <Spacing size={44} />
       <p
         style={{
           fontSize: '19px',
@@ -78,9 +81,6 @@ export default function Age(props: Props) {
           <p style={{ fontWeight: 500, fontSize: '14px', lineHeight: '17px', color: '#1D1D1F' }}>관련 기사 더보기</p>
         </button>
       </Link>
-
-      <Spacing size={48} />
-      <CtaButtons />
     </>
   );
 }
